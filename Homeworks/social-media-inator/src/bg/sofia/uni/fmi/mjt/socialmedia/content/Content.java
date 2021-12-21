@@ -1,0 +1,36 @@
+package bg.sofia.uni.fmi.mjt.socialmedia.content;
+
+import java.util.Collection;
+import java.util.Map;
+
+public interface Content {
+
+    /**
+     * Returns the total number of likes.
+     */
+    int getNumberOfLikes();
+
+    /**
+     * Returns the total number of comments.
+     */
+    int getNumberOfComments();
+
+    /**
+     * Returns the unique id of the content
+     */
+    String getId();
+
+    /**
+     * Returns a Collection of all tags used in the description.
+     * Аll tags should start with '#'.
+     */
+    Collection<String> getTags();
+
+    /**
+     * Returns a Collection of all users mentioned in the description.
+     * Аll mentions should start with '@'.
+     * @return
+     */
+    Map<String, Integer> getMentions();
+
+}
